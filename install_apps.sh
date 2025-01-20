@@ -51,7 +51,7 @@ fi
 
 # Install Casks
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Installing essential applications..."
-if brew install --cask microsoft-teams onedrive microsoft-onenote insomnia whatsapp xmind the-unarchiver spotify vlc google-chrome visual-studio-code github docker virtualbox readest dbeaver-community applite postman; then
+if brew install --cask microsoft-teams onedrive microsoft-onenote insomnia whatsapp xmind the-unarchiver spotify vlc google-chrome visual-studio-code github docker virtualbox readest dbeaver-community applite postman onyx; then
     echo "$(date '+%Y-%m-%d %H:%M:%S') - All applications installed successfully."
 else
     echo "$(date '+%Y-%m-%d %H:%M:%S') - Some application installations failed. Check logs."
