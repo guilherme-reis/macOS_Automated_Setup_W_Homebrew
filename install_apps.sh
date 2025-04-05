@@ -12,15 +12,6 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') - Welcome to the Automated Setup Script!"
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Administrator access is required."
 sudo -v
 
-# macOS Updates
-echo "$(date '+%Y-%m-%d %H:%M:%S') - Checking for available macOS updates..."
-if softwareupdate --list | grep -q 'No new software available'; then
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - No macOS updates available."
-else
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - Installing macOS updates..."
-    softwareupdate --all --install || echo "$(date '+%Y-%m-%d %H:%M:%S') - macOS update failed."
-fi
-
 # Xcode Tools Installation
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Verifying Xcode Command Line Tools installation..."
 xcode-select --install || echo "$(date '+%Y-%m-%d %H:%M:%S') - Xcode Command Line Tools are already installed."
@@ -51,7 +42,7 @@ fi
 
 # Install Casks
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Installing essential applications..."
-if brew install --cask microsoft-teams onedrive microsoft-onenote insomnia whatsapp xmind the-unarchiver spotify vlc google-chrome visual-studio-code github docker virtualbox readest dbeaver-community applite postman onyx; then
+if brew install --cask google-chrome microsoft-teams onedrive microsoft-onenote the-unarchiver discord spotify vlc google-chrome visual-studio-code github docker dbeaver-community applite postman onyx obsidian ngrok; then
     echo "$(date '+%Y-%m-%d %H:%M:%S') - All applications installed successfully."
 else
     echo "$(date '+%Y-%m-%d %H:%M:%S') - Some application installations failed. Check logs."
